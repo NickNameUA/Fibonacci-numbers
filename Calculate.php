@@ -3,22 +3,22 @@ session_start();
 $maxAmount = $_POST['maxAmount'];
 $_SESSION['maxAmount'] = $maxAmount;
 if ($maxAmount == ''){
-	$_SESSION['Message'] = 'Ви не ввели номер числа';
+	$_SESSION['message'] = 'Ви не ввели номер числа';
 	header('Location: Index.php');
 	exit;
 };
 if ($maxAmount == 0 || $maxAmount == 1){
-	$_SESSION['Message'] = '0 ';
+	$_SESSION['message'] = '0 ';
 	header('Location: Index.php');
 	exit;
 };
 if ($maxAmount < 0){
-	$_SESSION['Message'] = 'Відємні числа не можливо порахувати';
+	$_SESSION['message'] = 'Відємні числа не можливо порахувати';
 	header('Location: Index.php');
 	exit;
 };
 if (strlen($maxAmount) > 3){
-	$_SESSION['Message'] = 'Надто велики чесло';
+	$_SESSION['message'] = 'Надто велики чесло';
 	header('Location: Index.php');
 	exit;
 };
@@ -37,7 +37,7 @@ while ($Amount < $maxAmount - 2) {
 	$Amount += 1;
 	$numbers = $numbers . ' ' . $number;
 };
-$_SESSION['Message'] = $numbers;
+$_SESSION['message'] = $numbers;
 //Check number
 header('Location: Index.php');
 exit;

@@ -1,9 +1,9 @@
-#Message {
+#message {
   position: relative;
   width: fit-content;
   text-align: center;
 }
-#Message p {
+#message p {
   color: blue;
   font-size: large;
   font-style: oblique;

@@ -21,16 +21,16 @@
             <input class="button" type="submit" name="submit" value="Розрахувати">
           </div><div>
             <?php
-              if (!$_SESSION["Message"] == NULL){
+              if (!$_SESSION["message"] == NULL){
                 echo '
-                  <div id="Message">
+                  <div id="message">
                     <p>
-                      '.$_SESSION["Message"].'
+                      '.$_SESSION["message"].'
                     </p>
                   </div>
                 ';
               }
-              $_SESSION["Message"] = NULL;
+              $_SESSION["message"] = NULL;
             ?>
           </div>
         </div>
