@@ -1,7 +1,7 @@
 <?php 
 session_start();
-$maxAmount = $_POST['maxAmount'];
-$_SESSION['maxAmount'] = $maxAmount;
+$maxAmount = $_POST['maxamount'];
+$_SESSION['maxamount'] = $maxAmount;
 if ($maxAmount == ''){
 	$_SESSION['message'] = 'Ви не ввели номер числа';
 	header('Location: Index.php');
@@ -23,18 +23,18 @@ if (strlen($maxAmount) > 3){
 	exit;
 };
 $numbers = '0 1';
-$Amount = 0;
+$amount = 0;
 $number = 0;
 $number1 = 0;
 $number2 = 1;
-while ($Amount < $maxAmount - 2) {
+while ($amount < $maxAmount - 2) {
 	$number = $number1 + $number2;
 	if ($number1 < $number2){
 	$number1 = $number;
 	}else{
 		$number2 = $number;
 	};
-	$Amount += 1;
+	$amount += 1;
 	$numbers = $numbers . ' ' . $number;
 };
 $_SESSION['message'] = $numbers;
